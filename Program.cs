@@ -4,20 +4,22 @@ namespace ConsoleApp1
 {
     class Program
     {
-        //string[] projectMembers;
+        
         static void Main(string[] args)
         {
             string[] projectNames;                          //Name of the project(s)
-            //int numberOfMembers;                          //Number of team members in a group
             string[] projectMembers;                        //Name of team member(s)
-            
-            int codingHours, designHours,                   //Number of hours in each part of project
-                testingHours, projectManagementHours,
-                requirementsAnalysisHours;
+
+            int codingHours = 0;                            //
+            int designHours = 0;                            //Number of hours in each part of project
+            int testingHours = 0;                           //
+            int projectManagementHours = 0;                 //
+            int requirementsAnalysisHours = 0;              //
 
             projectNames = ProjectInfo();
             projectMembers = CreateTeamMember();
             PrintTeamMembers(projectNames,projectMembers);
+            HoursExpended();
           
         }
 
@@ -58,6 +60,26 @@ namespace ConsoleApp1
         }
 
         /*
+         * Displays hours worked in for each team member
+         * for each part of the project. Not sure what to do with
+         * fully yet.
+         */
+        static void HoursExpended()
+        {
+            int _codingHours = 0;
+            Console.WriteLine(_codingHours);
+            int _designHours = 0;
+            Console.WriteLine(_designHours);
+            int _testingHours = 0;
+            Console.WriteLine(_testingHours);
+            int _managingHours = 0;
+            Console.WriteLine(_managingHours);
+            int _analysisHours = 0;
+            Console.WriteLine(_analysisHours);
+
+        }
+
+        /*
          * Prints out a list of project names and team members from
          * an array of strings. 
          */
@@ -74,23 +96,6 @@ namespace ConsoleApp1
             {
                 Console.Write(_projectMembers[i] + " ");
             }
-        }
-
-        /*
-         * Manages team members. Not sure how to go about this yet. WIP
-         */
-        static void ManageTeamMembers()
-        {
-
-        }
-
-        
-        /*
-         * Manages hours that each team member has worked
-         */
-        static void HoursExpended()
-        {
-
         }
 
     }
